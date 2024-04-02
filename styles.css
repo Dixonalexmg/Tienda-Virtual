@@ -10,10 +10,7 @@ header {
     border: 1px solid red;
     height: 152px;
 }
-section {
-    border: 1px solid purple;
-    height: 340px;
-}
+
 main {
     border: 1px solid blue;
     height: auto;
@@ -31,12 +28,40 @@ footer {
     min-height: inherit;
     
 }
+
+section#hero {
+    border: 1px solid purple;
+    height: 340px;
+    background: url(assets/hero_bg.png);
+    background-size: cover;
+    background-position: top center;
+}
+
+section#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.title-hero span {
+    display: block;
+    color: white;
+    font-weight: 700;
+}
+
+.title-hero span:first-child {
+    font-size: 40px;
+}
+.title-hero span:last-child {
+    font-size: 100px;
+    line-height: 80px;
+}
+  
 .product-container {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(360px, 1fr));
     grid-gap: 20px;
     justify-content: center;
-    
+
 }
 
 .product-card {
