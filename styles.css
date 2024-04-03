@@ -7,8 +7,7 @@ body, html {
     font-family: "Inter", sans-serif;
 }
 header {
-    border: 1px solid red;
-    height: 152px;
+    background-color: #ff3b3c; 
 }
 
 main {
@@ -19,6 +18,61 @@ footer {
     border: 1px solid #009145;
     min-height: 368px;
 }
+.search {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 15px;
+}
+  
+.search .form {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.search .form input {
+    height: 62px;
+    border-radius: 14px;
+    border: none;
+    width: 505px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center ;
+}
+.search .social ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.search .social ul li {
+    padding: 0 10px;
+}
+.nav {
+    padding: 10px 0;
+    margin: 20px 50px 0px 50px;
+}
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav ul li a {
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+}
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+   
 .container {
     width: 100%;
     max-width: 1220px;
