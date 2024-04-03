@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}
+header {
+    background-color: #ff3b3c; 
+}
+.search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+}
+  
+.search .form {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.search .form input {
+    height: 62px;
+    border-radius: 14px;
+    border: none;
+    width: 505px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center ;
+}
+.search .social ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.search .social ul li {
+    padding: 0 10px;
+}
+.nav {
+    padding: 10px 0;
+}
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav ul li a {
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+}
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+   
+.container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    height: inherit;
+    min-height: inherit;
+    
+}
+
+section#hero {
+    height: 340px;
+    background: url(assets/hero_bg.png);
+    background-size: cover;
+    background-position: top center;
+}
+
+section#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.title-hero span {
+    display: block;
+    color: white;
+    font-weight: 700;
+}
+
+.title-hero span:first-child {
+    font-size: 40px;
+}
+.title-hero span:last-child {
+    font-size: 100px;
+    line-height: 80px;
+}
+  
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(360px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    padding-top: 20px;
+
+}
+
+.product-card {
+    background-color: #f0f0f0;
+    border-radius: 14px;
+    transition: transform 0.7s ease;
+    width: auto;
+}
+.product-card:hover{
+    transform: translateY(-10px);
+
+}
+.product-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.product-info{
+    padding: 20px;
+    box-sizing: border-box;
+}
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+    word-wrap: break-word;
+    display: block;
+    line-height: 22px;
+}
+.product-description {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+.product-price-block {
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-price-block .price {
+    font-size: 22px;
+    font-weight: 700;
+    flex: 1;
+}
+.product-price-block .discount {
+    font-size: 12px;
+    font-weight: 700;
+    color: #428f13;
+}
+.product-tax-policy {
+    font-size: 10px;
+    font-weight: 100;
+}
+footer {
+    background-color: #7525A7;
+    min-height: 368px;
+    padding-top: 20px;
+}
+footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .columns-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .columns-container .col ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .columns-container .col ul li {
+    padding: 5px 0;
+  }
+  .columns-container .col ul li.col-main-item {
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  .columns-container .col ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .copyright {
+    border-top: 1px solid #ba53fb;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 30px 0;
+    box-sizing: border-box;
+  }  
+
+/* vista tableta */
+@media(max-width:768px){
+    .product-container{
+       grid-template-columns: repeat(2, 1fr);   
+    }
+    .search .form input {
+      width: 300px;
+    }
+    .container{
+      width: 100%;
+    }
+    }
+    /* vista de telefono */
+    @media(max-width:425px){
+      .product-container{
+        grid-template-columns: repeat(1, 1fr);   
+     }
+     .search .form input {
+       width: 100px;
+     }
+     .container{
+       width: 100%;
+     }
+     .title-container span:first-child {
+      font-size: 30px;
+    }
+    .title-container span:last-child {
+      font-size: 80px;
+      line-height: 80px;
+    } 
+    }
