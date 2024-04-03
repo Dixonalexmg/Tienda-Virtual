@@ -5,6 +5,7 @@
 }
 body, html {
     font-family: "Inter", sans-serif;
+    margin: 0;
 }
 header {
     background-color: #ff3b3c; 
@@ -19,13 +20,10 @@ footer {
     min-height: 368px;
 }
 .search {
-    flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 15px;
+    padding-top: 20px;
 }
   
 .search .form {
@@ -54,11 +52,10 @@ footer {
 }
 .nav {
     padding: 10px 0;
-    margin: 20px 50px 0px 50px;
 }
 .nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -77,14 +74,12 @@ footer {
     width: 100%;
     max-width: 1220px;
     margin: 0 auto;
-    border: 1px solid springgreen;
     height: inherit;
     min-height: inherit;
     
 }
 
 section#hero {
-    border: 1px solid purple;
     height: 340px;
     background: url(assets/hero_bg.png);
     background-size: cover;
@@ -115,6 +110,7 @@ section#hero .container {
     grid-template-columns: repeat(auto-fit,minmax(360px, 1fr));
     grid-gap: 20px;
     justify-content: center;
+    padding-top: 20px;
 
 }
 
@@ -161,7 +157,7 @@ section#hero .container {
     font-weight: 700;
     flex: 1;
 }
-    .product-price-block .discount {
+.product-price-block .discount {
     font-size: 12px;
     font-weight: 700;
     color: #428f13;
@@ -171,3 +167,34 @@ section#hero .container {
     font-weight: 100;
 }
 
+/* vista tableta */
+@media(max-width:768px){
+    .product-container{
+       grid-template-columns: repeat(2, 1fr);   
+    }
+    .search .form input {
+      width: 300px;
+    }
+    .container{
+      width: 100%;
+    }
+    }
+    /* vista de telefono */
+    @media(max-width:425px){
+      .product-container{
+        grid-template-columns: repeat(1, 1fr);   
+     }
+     .search .form input {
+       width: 100px;
+     }
+     .container{
+       width: 100%;
+     }
+     .title-container span:first-child {
+      font-size: 30px;
+    }
+    .title-container span:last-child {
+      font-size: 80px;
+      line-height: 80px;
+    } 
+    }
