@@ -10,15 +10,6 @@ body, html {
 header {
     background-color: #ff3b3c; 
 }
-
-main {
-    border: 1px solid blue;
-    height: auto;
-}
-footer {
-    border: 1px solid #009145;
-    min-height: 368px;
-}
 .search {
     display: flex;
     justify-content: space-around;
@@ -166,6 +157,43 @@ section#hero .container {
     font-size: 10px;
     font-weight: 100;
 }
+footer {
+    background-color: #7525A7;
+    min-height: 368px;
+    padding-top: 20px;
+}
+footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .columns-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .columns-container .col ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .columns-container .col ul li {
+    padding: 5px 0;
+  }
+  .columns-container .col ul li.col-main-item {
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  .columns-container .col ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .copyright {
+    border-top: 1px solid #ba53fb;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 30px 0;
+    box-sizing: border-box;
+  }  
 
 /* vista tableta */
 @media(max-width:768px){
